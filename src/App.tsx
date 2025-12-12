@@ -36,7 +36,9 @@ const App: React.FC = () => {
 
     try {
       // 1. Generate the content using Gemini
-      const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY }); // Ensure this env var is set
+      const ai = new GoogleGenAI({
+        apiKey: "AIzaSyBhSUQ010hE54w8090its4dr6pZe8uJ67Y",
+      }); // Ensure this env var is set
       const recentDamage = damageLog.slice(-10).join(", ");
       const prompt = `You are a sarcastic coroner. A cardboard ragdoll named "Buddy" has just died. The cause of death was cumulative damage, specifically: [${recentDamage}]. Write a short, funny, 30-word email body describing how he met his demise.`;
 
