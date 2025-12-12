@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"
+    />
+    <title>Cardboard Buddy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #dcb386;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cardboard-bg {
+        background-color: #dcb386;
+        background-image: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 7px,
+          #d4aa7d 7px,
+          #d4aa7d 8px
+        );
+      }
+      .cardboard-floor {
+        background-color: #cda270;
+        background-image: radial-gradient(#b88e5d 15%, transparent 16%),
+          radial-gradient(#b88e5d 15%, transparent 16%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This line connects the HTML to your React code -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
